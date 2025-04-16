@@ -34,4 +34,5 @@ Route::middleware('auth:api')->group(function () {
   Route::get('/solicitudes', [QuejaController::class, 'index']);
   Route::put('/solicitudes/{folio}/reasignar', [QuejaController::class, 'reasignarDepartamento']);
   Route::put('/solicitudes/{folio}/estado', [QuejaController::class, 'cambiarEstado']);
+  Route::get('/estadisticas/departamentos', [QuejaController::class, 'estadisticasPorDepartamento']);
 });
