@@ -23,7 +23,7 @@ class QuejaController extends Controller
         })
         ->orderBy('created_at', 'desc');
 
-    $solicitudes = $query->paginate(10);
+    $solicitudes = $query->paginate(5);
 
     return response()->json($solicitudes);
 }
